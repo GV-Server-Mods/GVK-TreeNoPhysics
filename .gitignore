@@ -1,0 +1,27 @@
+# Build output
+bin/
+obj/
+*.sbcB5
+
+# MDK2 (mdk.ini is project config and is tracked; mdk.local.ini is per-machine)
+.mdk/
+mdk.local.ini
+
+# IDE per-user state
+.vs/
+.idea/
+*.user
+*.rsuser
+*.suo
+
+# Tool output
+graphify-out/
+__pycache__/
+
+# Backups and merge leftovers
+*.bak
+*.orig
+
+# OS
+desktop.ini
+Thumbs.db

@@ -1,0 +1,24 @@
+[h1]Tree No-Physics[/h1]
+Removes collision from planet trees. They still look the same — you just don't bounce off them anymore.
+
+[h1]What it does[/h1]
+[list]
+[*] Disables Havok collision on planet environment tree sectors, client and server, in sync.
+[*] Trees stay fully visible — nothing about how the world looks changes.
+[*] Rovers, grids, and players drive/fly straight through them instead of snagging or getting launched.
+[*] Whole 1–2 km sectors are cleared as soon as they load — no partial/distance-based cutoffs.
+[*] Zero-allocation, low-overhead — checks active sectors every 10 ticks, same cadence the game already uses internally.
+[/list]
+
+[h1]Why[/h1]
+Dense tree cover costs real server performance to simulate as solid collision, and it snags ground vehicles at low speed for no real gameplay benefit. This mod turns that collision off entirely while leaving the environment looking untouched.
+
+[h1]Compatibility[/h1]
+[list]
+[*] Standard world mod — no client plugin required.
+[*] Safe with any planet or environment mod; it only disables collision on sectors that already exist.
+[*] Does not change tree spawn rules, density, or appearance.
+[/list]
+
+[h1]Server admins[/h1]
+Pairs with the [b]PhysicsOptimizations[/b] Torch plugin's Tree Physics Optimizer module, which stops the dedicated server from baking tree collision shapes in the first place. Running this mod alone is safe on any server; running it alongside that plugin gives the full performance benefit.
