@@ -4,6 +4,13 @@ A lightweight client & server companion mod for Space Engineers that disables Ha
 
 Trees remain fully visible — only their collision is removed. Vehicles, players, and grids pass straight through them.
 
+## Philosophy
+- **Remove cost without changing the world.** Trees stay visible; only the collision work goes.
+- **No settings.** It is on while loaded, so there is nothing to misconfigure.
+
+## Requirements
+No other mod is needed. For the full server-side benefit pair it with the PhysicsOptimizations Torch plugin (see below). Loaded with the rest of the server mods ([Steam collection](https://steamcommunity.com/sharedfiles/filedetails/?id=2650582206)).
+
 ## Why
 
 On planets like Kharak with dense tree/foliage cover, Space Engineers bakes Havok static collision meshes (`HkStaticCompoundShape`) for every loaded environment sector purely so trees can be solid. That collision baking and the resulting broadphase/narrowphase solver work is a recurring CPU cost for very little gameplay value, and it's the source of constant low-speed vehicle snagging on Kharak's terrain.
@@ -44,6 +51,12 @@ Running the mod without the plugin is safe (pure client/server-side collision to
 - Safe on any planet, vanilla or modded, with or without environment items (trees, bushes, rocks-as-trees, etc.) — it only touches sectors that exist.
 - Does not modify tree visuals, spawn rules, or environment item definitions — appearance and distribution are untouched.
 - No known conflicts with other mods; it does not patch or replace any vanilla type, only toggles an existing public property.
+
+## Quick links
+- Hub board and issues: [GV-Server-Mods/GVK-Settings](https://github.com/GV-Server-Mods/GVK-Settings)
+- Workshop: [3807055816](https://steamcommunity.com/sharedfiles/filedetails/?id=3807055816)
+- Steam guide: [players' rules and gameplay](https://steamcommunity.com/sharedfiles/filedetails/?id=2781522559); mod collection: [2650582206](https://steamcommunity.com/sharedfiles/filedetails/?id=2650582206)
+- Skills: [se-dev-kharak](https://github.com/GV-Server-Mods/se-dev-kharak)
 
 ## Credits
 
